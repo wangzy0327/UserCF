@@ -113,7 +113,7 @@ public class Mapper2 extends Mapper<LongWritable, Text, Text, Text> {
             System.out.println("####################");
             //result是结果矩阵中的某元素，坐标为   行：row_matrix1 , 列:row_matrix2(因为右矩阵已经转置)
             outKey.set(row_matrix1);
-            outValue.set(row_matrix2 + "_" + numerator);
+            //outValue.set(row_matrix2 + "_" + numerator);
             outValue.set(row_matrix2 + "_" + df.format(cos));
             //输出格式 key:行  value:列_值
             context.write(outKey, outValue);
